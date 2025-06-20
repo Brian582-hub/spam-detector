@@ -1,4 +1,3 @@
-import os
 from flask import Flask, request, jsonify
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
@@ -47,6 +46,10 @@ def predict():
         "prediction": "SPAM" if prediction == 1 else "NOT SPAM"
     })
 
+i# ... your Flask routes above ...
+
 if __name__ == '__main__':
-   port = int(os.environ.get("PORT", 5000))
-   app.run(host="0.0.0.0", port=port, debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
+
